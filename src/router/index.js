@@ -21,6 +21,42 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/shop",
+    component: () => import("@/layouts/default/Default.vue"),
+    children: [
+      {
+        path: "",
+        name: "Shop",
+        component: () =>
+          import(/* webpackChunkName: "shop" */ "@/views/Shop.vue"),
+      },
+    ],
+  },
+  {
+    path: "/about",
+    component: () => import("@/layouts/default/Default.vue"),
+    children: [
+      {
+        path: "",
+        name: "About",
+        component: () =>
+          import(/* webpackChunkName: "about" */ "@/views/About.vue"),
+      },
+    ],
+  },
+  {
+    path: "/contact",
+    component: () => import("@/layouts/default/Default.vue"),
+    children: [
+      {
+        path: "",
+        name: "Contact",
+        component: () =>
+          import(/* webpackChunkName: "shop" */ "@/views/Contact.vue"),
+      },
+    ],
+  },
 ];
 
 const router = createRouter({
