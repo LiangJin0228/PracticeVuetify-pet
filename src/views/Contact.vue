@@ -15,8 +15,8 @@
 <script>
 export default {
     data: () => ({
-        items: ['Trevor Handsen', 'Alex Nelson'],
-        selected: ['Trevor Handsen'],
+        items: ['TanLiangJin', 'CheePeiXuan', 'Jacky Chan', 'Tiffang'],
+        selected: ['TanLiangJin'],
         subject: 'Plans for the weekend',
         title: 'Hi,\nI just wanted to check in and see if you had any plans the upcoming weekend. We are thinking of heading up to Napa',
     }),
