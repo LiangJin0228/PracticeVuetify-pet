@@ -1,8 +1,18 @@
 <template>
+    <v-text-field v-model="search" clearable hide-details label="Search Products..." prepend-inner-icon="mdi-magnify"
+        single-line></v-text-field>
     <v-container>
-        <v-card v-for="item in items" :key="item.id">
-            <v-card-title>{{ item.title }}</v-card-title>
-        </v-card>
+        <v-row>
+            <v-col v-for="item in displayedItems" :key="item.id" cols="12" sm="6" md="4">
+                <v-card height="200" link>
+                    <v-card-title>{{ item.title }}</v-card-title>
+                    <v-card-text>{{ item.content }}</v-card-text>
+                    <v-card-subtitle>Price: ${{ item.prices }}</v-card-subtitle>
+                    <v-card-subtitle>Class: {{ item.class }}</v-card-subtitle>
+                </v-card>
+            </v-col>
+        </v-row>
+        <v-pagination v-model="page" :length="Math.ceil(totalItems / perPage)"></v-pagination>
     </v-container>
 </template>
 
@@ -10,6 +20,9 @@
 export default {
     data() {
         return {
+            search: '',
+            page: 1,
+            perPage: 9, // 每页显示的项目数量
             items: [
                 {
                     "id": 1,
@@ -327,6 +340,27 @@ export default {
                 }
             ],
         }
+    },
+    computed: {
+        totalItems() {
+            return this.searching.length;
+        },
+        displayedItems() {
+            const start = (this.page - 1) * this.perPage;
+            const end = start + this.perPage;
+            return this.searching.slice(start, end);
+        },
+        searching() {
+            if (!this.search) return this.items;
+
+            const search = this.search.toLowerCase();
+
+            return this.items.filter(item => {
+                const text = item.title.toLowerCase() + item.content.toLowerCase() + item.class.toLowerCase();
+
+                return text.indexOf(search) > -1;
+            })
+        },
     }
 }
 </script>
