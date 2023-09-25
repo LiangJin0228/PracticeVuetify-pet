@@ -81,7 +81,8 @@
                 <v-row>
                     <v-col cols="12" md="4">
                         <v-card>
-                            <v-img src="/assets/grooming.jpg" alt="寵物美容服務"></v-img>
+                            <v-img src="https://bpanimalhospital.com/wp-content/uploads/shutterstock_1547371985.jpg"
+                                alt="寵物美容服務"></v-img>
                             <v-card-title>寵物美容</v-card-title>
                             <v-card-text>
                                 我們提供專業的寵物美容服務，讓您的寵物看起來煥然一新。
@@ -90,7 +91,7 @@
                     </v-col>
                     <v-col cols="12" md="4">
                         <v-card>
-                            <v-img src="/assets/boarding.jpg" alt="寵物寄養服務"></v-img>
+                            <v-img src="https://www.tivola.de/src/files/pethotel-banner-6_uhd.jpg" alt="寵物寄養服務"></v-img>
                             <v-card-title>寵物寄養</v-card-title>
                             <v-card-text>
                                 無論您需要短期或長期的寵物寄養，我們都為您提供安全舒適的環境。
@@ -99,7 +100,9 @@
                     </v-col>
                     <v-col cols="12" md="4">
                         <v-card>
-                            <v-img src="/assets/training.jpg" alt="寵物訓練服務"></v-img>
+                            <v-img
+                                src="https://media.istockphoto.com/photos/young-gril-playing-with-her-dog-outside-on-a-field-dog-is-very-happy-picture-id938304518?k=20&m=938304518&s=612x612&w=0&h=54zq1H1dlQaNvpd-zUthGu7JXTFbQz651Xj_H9TjEfA="
+                                alt="寵物訓練服務"></v-img>
                             <v-card-title>寵物訓練</v-card-title>
                             <v-card-text>
                                 我們的專業訓練師將幫助您的寵物培養好行為和技能。
@@ -117,7 +120,9 @@
                 <v-row>
                     <v-col cols="12" md="4">
                         <v-card>
-                            <v-img src="/assets/pet-food.jpg" alt="寵物食品"></v-img>
+                            <v-img
+                                src="https://nypost.com/wp-content/uploads/sites/2/2022/10/dogfood.jpg?quality=75&strip=all"
+                                alt="寵物食品"></v-img>
                             <v-card-title>寵物食品</v-card-title>
                             <v-card-text>
                                 從高質量的寵物食品到零食，我們有各種各樣的選擇。
@@ -126,7 +131,9 @@
                     </v-col>
                     <v-col cols="12" md="4">
                         <v-card>
-                            <v-img src="/assets/toys.jpg" alt="寵物玩具"></v-img>
+                            <v-img
+                                src="https://cdn.thewirecutter.com/wp-content/media/2021/12/dog-toys-2048px-0010.jpg?auto=webp&quality=75&width=980&dpr=2"
+                                alt="寵物玩具"></v-img>
                             <v-card-title>寵物玩具</v-card-title>
                             <v-card-text>
                                 我們提供各種各樣的寵物玩具，讓您的寵物保持活躍和快樂。
@@ -135,7 +142,9 @@
                     </v-col>
                     <v-col cols="12" md="4">
                         <v-card>
-                            <v-img src="/assets/accessories.jpg" alt="寵物用品"></v-img>
+                            <v-img
+                                src="https://img.freepik.com/free-vector/pet-care-elements-set_1284-16001.jpg?w=1800&t=st=1695656533~exp=1695657133~hmac=552ccd44c653fea2cf52bd1d951c03b9515964c8bf8247e1782655df29ee236a"
+                                alt="寵物用品"></v-img>
                             <v-card-title>寵物用品</v-card-title>
                             <v-card-text>
                                 從項圈到穿戴配件，我們提供一系列寵物用品以滿足您的需求。
