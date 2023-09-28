@@ -57,6 +57,32 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/login",
+    component: () => import("@/layouts/default/Default.vue"),
+    children: [
+      {
+        path: "",
+        name: "Login",
+        component: () =>
+          import(/* webpackChunkName: "login" */ "@/views/Login.vue"),
+      },
+      {
+        path: "otp",
+        name: "OTP",
+        component: () =>
+          import(/* webpackChunkName: "otp" */ "@/views/OTP.vue"),
+      },
+      {
+        path: "resetPassword",
+        name: "ResetPassword",
+        component: () =>
+          import(
+            /* webpackChunkName: "resetPassword" */ "@/views/ResetPassword.vue"
+          ),
+      },
+    ],
+  },
 ];
 
 const router = createRouter({
