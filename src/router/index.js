@@ -68,6 +68,14 @@ const routes = [
           import(/* webpackChunkName: "login" */ "@/views/Login.vue"),
       },
       {
+        path: "forgotPassword",
+        name: "ForgotPassword",
+        component: () =>
+          import(
+            /* webpackChunkName: "forgotPassword" */ "@/views/ForgotPassword.vue"
+          ),
+      },
+      {
         path: "otp",
         name: "OTP",
         component: () =>
