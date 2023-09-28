@@ -11,7 +11,9 @@
         </v-snackbar>
     </v-container>
 </template>
+
 <script>
+import router from '@/router'
 export default {
     data: () => ({
         timer: null,
@@ -28,7 +30,7 @@ export default {
         this.timer = setInterval(this.countdown, 1000);
     },
     methods: {
-        onFinish(rsp) {
+        async onFinish(rsp) {
             this.loading = true
 
             setTimeout(() => {
@@ -39,9 +41,9 @@ export default {
             }, 1000)
 
             if (rsp === this.expectedOtp) {
-                setTimeout(() => {
-                    router.push({ name: 'ResetPassword', params: { username: this.username } })
-                }, 1000)
+                await new Promise(resolve => setTimeout(resolve, 3000));
+                router.push({ name: 'ResetPassword', params: { username: this.username } });
+
             }
         },
         countdown() {

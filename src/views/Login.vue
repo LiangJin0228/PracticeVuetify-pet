@@ -12,7 +12,8 @@
             <div class="text-subtitle-1 text-medium-emphasis d-flex align-center justify-space-between">
                 Password
 
-                <a class="text-caption text-decoration-none text-blue" href="#" rel="noopener noreferrer" target="_blank">
+                <a @click.prevent="OTPPage" class="text-caption text-decoration-none text-blue" href="#"
+                    rel="noopener noreferrer" target="_blank">
                     Forgot login password?</a>
             </div>
 
@@ -41,9 +42,16 @@
     </div>
 </template>
 <script>
+import router from '@/router';
+
 export default {
     data: () => ({
         visible: false,
     }),
+    methods: {
+        OTPPage() {
+            router.push({ name: 'OTP' })
+        }
+    }
 }
 </script>

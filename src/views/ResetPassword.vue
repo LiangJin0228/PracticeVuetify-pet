@@ -3,7 +3,7 @@
         <v-card class="ma-auto px-6 py-8 w-100" max-width="512">
             <v-form v-model="form" @submit.prevent="onSubmit">
                 <v-text-field type="password" v-model="password" :readonly="loading" :rules="passwordRules" class="mb-2"
-                    clearable label="Password" placeholder="Enter your password"></v-text-field>
+                    clearable label="New Password" placeholder="Enter your password"></v-text-field>
 
                 <v-text-field type="password" v-model="confirmPassword" :readonly="loading" :rules="confirmPasswordRules"
                     clearable label="Confirm Password" placeholder="Confirm password"></v-text-field>
@@ -12,13 +12,16 @@
 
                 <v-btn :disabled="!form" :loading="loading" block color="success" size="large" type="submit"
                     variant="elevated">
-                    Sign In
+                    Reset Password
                 </v-btn>
             </v-form>
         </v-card>
     </v-container>
 </template>
+
 <script>
+import router from '@/router'
+
 export default {
     data: () => ({
         form: false,
@@ -28,15 +31,17 @@ export default {
     }),
 
     methods: {
-        onSubmit() {
+        async onSubmit() {
             if (!this.form) return
 
             this.loading = true
 
             setTimeout(() => {
                 this.loading = false
-                router.push({ name: 'Dashboard', params: { username: this.username, password: this.password } })
             }, 2000)
+
+            await new Promise(resolve => setTimeout(resolve, 3000))
+            router.push({ name: 'Dashboard', params: { username: this.username, password: this.password } })
         },
         required(v) {
             return !!v || 'Field is required'
