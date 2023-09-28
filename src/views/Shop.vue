@@ -2,7 +2,7 @@
     <v-text-field v-model="search" clearable hide-details label="Search Products..." prepend-inner-icon="mdi-magnify"
         single-line></v-text-field>
     <v-container>
-        <v-row>
+        <v-row class="my-15">
             <v-col v-for="item in displayedItems" :key="item.id" cols="12" sm="6" md="4">
                 <v-card height="200" link>
                     <v-card-title>{{ item.title }}</v-card-title>
