@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <v-container>
         <v-img class="mx-auto my-6" max-width="228"
             src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-text-light.svg"></v-img>
 
@@ -29,7 +29,7 @@
                 </v-card-text>
             </v-card>
 
-            <v-btn block class="mb-8" color="blue" size="large" variant="tonal">
+            <v-btn block class="mb-8" color="blue" size="large" variant="tonal" :to="{ name: 'Dashboard' }">
                 Log In
             </v-btn>
 
@@ -39,7 +39,7 @@
                 </a>
             </v-card-text>
         </v-card>
-    </div>
+    </v-container>
 </template>
 <script>
 import router from '@/router';

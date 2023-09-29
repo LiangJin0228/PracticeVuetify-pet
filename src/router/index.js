@@ -103,6 +103,18 @@ const routes = [
       },
     ],
   },
+  {
+    path: "/dashboard",
+    component: () => import("@/layouts/default/Default.vue"),
+    children: [
+      {
+        path: "",
+        name: "Dashboard",
+        component: () =>
+          import(/* webpackChunkName: "dashboard" */ "@/views/Dashboard.vue"),
+      },
+    ],
+  },
 ];
 
 const router = createRouter({
