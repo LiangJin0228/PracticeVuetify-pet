@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-form v-model="form">
         <v-img class="mx-auto my-6" max-width="228"
             src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-text-light.svg"></v-img>
 
@@ -29,7 +29,7 @@
                 </v-card-text>
             </v-card>
 
-            <v-btn block class="mb-8" color="blue" size="large" variant="tonal" :to="{ name: 'Dashboard' }">
+            <v-btn block class="mb-8" color="blue" size="large" variant="tonal" @click="onSubmit">
                 Log In
             </v-btn>
 
@@ -39,18 +39,24 @@
                 </a>
             </v-card-text>
         </v-card>
-    </v-container>
+    </v-form>
 </template>
 <script>
 import router from '@/router';
 
 export default {
     data: () => ({
+        form: false,
         visible: false,
     }),
     methods: {
         OTPPage() {
             router.push({ name: 'OTP' })
+        },
+        async onSubmit() {
+            if (!this.form) return
+            await new Promise(resolve => setTimeout(resolve, 3000))
+            router.push({ name: 'Dashboard', params: { username: this.username, password: this.password } })
         }
     }
 }
