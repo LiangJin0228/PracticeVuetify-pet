@@ -25,6 +25,9 @@
             <v-btn rounded variant="text" to="/login">
               Login
             </v-btn>
+            <v-btn rounded variant="text" to="/register">
+              Register
+            </v-btn>
           </div>
         </v-card-text>
       </v-card>
