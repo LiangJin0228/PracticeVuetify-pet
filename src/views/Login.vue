@@ -33,8 +33,8 @@
                 Log In
             </v-btn>
 
-            <v-card-text class="text-center">
-                <a class="text-blue text-decoration-none" href="#" rel="noopener noreferrer" target="_blank">
+            <v-card-text class="text-center" link>
+                <a class="text-blue text-decoration-none" rel="noopener noreferrer" @click.prevent="navigateToRegister">
                     Sign up now <v-icon icon="mdi-chevron-right"></v-icon>
                 </a>
             </v-card-text>
@@ -57,6 +57,9 @@ export default {
             if (!this.form) return
             await new Promise(resolve => setTimeout(resolve, 3000))
             router.push({ name: 'Dashboard', params: { username: this.username, password: this.password } })
+        },
+        navigateToRegister() {
+            router.push('/register')
         }
     }
 }
